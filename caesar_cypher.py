@@ -1,6 +1,6 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 result=[]
-continue_game=True
+continue_cypher=True
 
 def caesar(text, shift, direction):
     if direction=='decode':
@@ -13,7 +13,7 @@ def caesar(text, shift, direction):
     print(' '.join(result))
    
 
-while continue_game:
+while continue_cypher:
     options=input('Press "start" to begin.\nPress "quit" to exit\n').lower()
     if options=='start':
         direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
@@ -22,6 +22,6 @@ while continue_game:
         caesar(text, shift, direction)
         result=[]
     elif options=='quit':
-        continue_game=False
+        continue_cypher=False
     else:
         print('Please enter a valid option')
